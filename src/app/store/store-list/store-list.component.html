@@ -1,0 +1,16 @@
+<h2>Listado de productos</h2>
+
+<button (click)="findAll()">All</button>
+
+<ul>
+  <li *ngFor="let store of stores">
+    <div>
+      <p>{{ store.id }}</p>
+      <p>{{ store.title }}</p>
+      <p>{{ store.price }}</p>
+      <p>{{ store.description }}</p>
+      <p>{{ store.category }}</p>
+      <img src="{{ store.image }}" width="200" alt="{{ store.title }}" />
+    </div>
+  </li>
+</ul>

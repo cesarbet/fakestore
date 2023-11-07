@@ -1,0 +1,62 @@
+<!-- <h2>Crear Producto</h2>
+
+<input type="text" [(ngModel)]="title"/>
+<input type="number" [(ngModel)]="price"/>
+<input type="text" [(ngModel)]="description"/>
+<input type="text" [(ngModel)]="category"/>
+<input type="text" [(ngModel)]="image"/>
+<button (click)="create()">Crear</button>
+
+<div *ngIf="createdStore">
+    se ha creado correctamente el evento con id asignado {{createdStore.id}}
+</div>
+
+
+
+
+<h2>Actualizar Producto</h2>
+<input type="text" [(ngModel)]="titleToUpdate"/>
+<input type="number" [(ngModel)]="priceToUpdate"/>
+<input type="text" [(ngModel)]="descriptionToUpdate"/>
+<input type="text" [(ngModel)]="categoryToUpdate"/>
+<input type="text" [(ngModel)]="imageToUpdate"/>
+<button (click)="update()">Actualizar</button> -->
+
+
+<div class="container">
+    <h2>Crear Producto</h2>
+    
+    <!-- Formulario para crear un producto -->
+    <input type="text" [(ngModel)]="title" placeholder="Título"/>
+    <input type="number" [(ngModel)]="price" placeholder="Precio"/>
+    <input type="text" [(ngModel)]="description" placeholder="Descripción"/>
+    <input type="text" [(ngModel)]="category" placeholder="Categoría"/>
+    <input type="text" [(ngModel)]="image" placeholder="URL de la Imagen"/>
+    <button (click)="create()">Crear</button>
+    
+    <div *ngIf="createdStore">
+      Se ha creado correctamente el producto con ID asignado {{createdStore.id}}
+    </div>
+    
+    <h2>Actualizar Producto</h2>
+    
+    <!-- Formulario para buscar y actualizar un producto por ID -->
+    <div class="form-group">
+      <label for="searchId">ID del Producto a Actualizar:</label>
+      <input type="number" id="searchId" [(ngModel)]="searchId" placeholder="ID del Producto"/>
+      <button (click)="loadStoreById(searchId)">Buscar</button>
+    </div>
+    
+    <div *ngIf="storeToUpdate">
+      <input type="text" [(ngModel)]="titleToUpdate" placeholder="Nuevo Título"/>
+      <input type="number" [(ngModel)]="priceToUpdate" placeholder="Nuevo Precio"/>
+      <input type="text" [(ngModel)]="descriptionToUpdate" placeholder="Nueva Descripción"/>
+      <input type="text" [(ngModel)]="categoryToUpdate" placeholder="Nueva Categoría"/>
+      <input type="text" [(ngModel)]="imageToUpdate" placeholder="Nueva URL de la Imagen"/>
+      <button (click)="update()">Actualizar</button>
+    </div>
+    <div *ngIf="updateMessage">
+        {{updateMessage}}
+    </div>
+    
+  </div>
